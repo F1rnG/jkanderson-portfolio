@@ -810,7 +810,7 @@ export default function Portfolio() {
               Download Resume
             </a>
             <span style={{ color: COLORS.trail, fontSize: "10px" }}>·</span>
-            <a href="https://linkedin.com/in/jamesanderson" style={{
+            <a href="https://www.linkedin.com/in/james-anderson-72426170/" style={{
               fontFamily: FONTS.mono, fontSize: "12px", color: COLORS.sky, letterSpacing: "1px", textDecoration: "none",
             }}>
               LinkedIn →
