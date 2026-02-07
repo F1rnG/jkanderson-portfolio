@@ -284,7 +284,31 @@ function Hero() {
         }}>
           Technical SEO · Schema Architecture · AI Search Optimization
         </div>
-        <a href="#about" style={{ animation: "fadeInUp 1s ease 0.7s forwards", opacity: 0, display: "inline-block" }}>
+        <div style={{
+          display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap",
+          animation: "fadeInUp 1s ease 0.6s forwards", opacity: 0, marginBottom: "40px",
+        }}>
+          <a href="#contact" style={{
+            fontFamily: FONTS.mono, fontSize: "12px", color: COLORS.snow, padding: "12px 28px",
+            background: COLORS.sunset, borderRadius: "6px", fontWeight: 500,
+            letterSpacing: "1.5px", textTransform: "uppercase", textDecoration: "none",
+            transition: "all 0.3s", display: "inline-block",
+          }}>
+            Get in Touch
+          </a>
+          <a href="/James_Anderson_Resume.pdf" download style={{
+            fontFamily: FONTS.mono, fontSize: "12px", color: COLORS.summit, padding: "12px 28px",
+            border: `1.5px solid ${COLORS.summit}44`, borderRadius: "6px", fontWeight: 500,
+            letterSpacing: "1.5px", textTransform: "uppercase", textDecoration: "none",
+            transition: "all 0.3s", display: "inline-flex", alignItems: "center", gap: "8px",
+          }}>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M7 1v9m0 0L3.5 6.5M7 10l3.5-3.5M1 13h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            Resume
+          </a>
+        </div>
+        <a href="#about" style={{ animation: "fadeInUp 1s ease 0.8s forwards", opacity: 0, display: "inline-block" }}>
           <div style={{
             width: "26px", height: "42px", border: `1.5px solid ${COLORS.ridge}66`, borderRadius: "13px",
             position: "relative", margin: "0 auto", cursor: "pointer",
@@ -775,9 +799,19 @@ export default function Portfolio() {
               (508) 769-5760
             </a>
           </div>
-          <div style={{ display: "flex", justifyContent: "center", gap: "24px", marginTop: "28px" }}>
+          <div style={{ display: "flex", justifyContent: "center", gap: "24px", marginTop: "28px", alignItems: "center" }}>
+            <a href="/James_Anderson_Resume.pdf" download style={{
+              fontFamily: FONTS.mono, fontSize: "12px", color: COLORS.alpine, letterSpacing: "1px",
+              display: "inline-flex", alignItems: "center", gap: "6px", textDecoration: "none",
+            }}>
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
+                <path d="M7 1v9m0 0L3.5 6.5M7 10l3.5-3.5M1 13h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              Download Resume
+            </a>
+            <span style={{ color: COLORS.trail, fontSize: "10px" }}>·</span>
             <a href="https://linkedin.com/in/jamesanderson" style={{
-              fontFamily: FONTS.mono, fontSize: "12px", color: COLORS.sky, letterSpacing: "1px",
+              fontFamily: FONTS.mono, fontSize: "12px", color: COLORS.sky, letterSpacing: "1px", textDecoration: "none",
             }}>
               LinkedIn →
             </a>
