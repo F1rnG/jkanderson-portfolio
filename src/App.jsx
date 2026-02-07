@@ -296,7 +296,7 @@ function Hero() {
           }}>
             Get in Touch
           </a>
-          <a href="/James_Anderson_Resume.pdf" download style={{
+          <a href="/Resume.pdf" download style={{
             fontFamily: FONTS.mono, fontSize: "12px", color: COLORS.summit, padding: "12px 28px",
             border: `1.5px solid ${COLORS.summit}44`, borderRadius: "6px", fontWeight: 500,
             letterSpacing: "1.5px", textTransform: "uppercase", textDecoration: "none",
@@ -800,7 +800,7 @@ export default function Portfolio() {
             </a>
           </div>
           <div style={{ display: "flex", justifyContent: "center", gap: "24px", marginTop: "28px", alignItems: "center" }}>
-            <a href="/James_Anderson_Resume.pdf" download style={{
+            <a href="/Resume.pdf" download style={{
               fontFamily: FONTS.mono, fontSize: "12px", color: COLORS.alpine, letterSpacing: "1px",
               display: "inline-flex", alignItems: "center", gap: "6px", textDecoration: "none",
             }}>
