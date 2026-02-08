@@ -296,7 +296,7 @@ function Hero() {
           }}>
             Get in Touch
           </a>
-          <a href="/Resume.pdf" download style={{
+          <a href="/James_Anderson_Resume.pdf" download style={{
             fontFamily: FONTS.mono, fontSize: "12px", color: COLORS.summit, padding: "12px 28px",
             border: `1.5px solid ${COLORS.summit}44`, borderRadius: "6px", fontWeight: 500,
             letterSpacing: "1.5px", textTransform: "uppercase", textDecoration: "none",
@@ -504,10 +504,10 @@ function AEOSection() {
       </h3>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
         {[
-          "Optimize for ChatGPT, Google AI Overviews, Perplexity & voice assistants",
-          "Structure content using entities, schema & semantic SEO for machine understanding",
-          "Develop high-confidence answer blocks, FAQs & structured data for AI results",
-          "Audit content for LLM retrieval, citation likelihood & zero-click visibility",
+          "Architect AEO strategies for ChatGPT, Google AI Overviews & Perplexity",
+          "Build entity-based content & schema frameworks for machine understanding",
+          "Develop high-confidence answer blocks & structured data targeting AI inclusion",
+          "Audit content for LLM citation likelihood & zero-click answer eligibility",
         ].map((item, i) => (
           <div key={i} style={{
             fontFamily: FONTS.body, fontSize: "13px", color: COLORS.ridge, lineHeight: 1.6,
@@ -555,43 +555,44 @@ export default function Portfolio() {
       title: "SEO Manager",
       company: "ARS / Rescue Rooter",
       bullets: [
-        "Managed and optimized 50+ localized SEO websites and a major corporate site, significantly enhancing online presence and performance.",
-        "Led development and launch of a new national corporate website, focusing on UX and technical SEO with an efficient CMS integration.",
-        "Oversaw migration of 20+ localized websites to a new enterprise CMS, prioritizing UX, technical SEO, and industry best practices.",
-        "Collaborated with content teams on innovative localized and national SEO strategies to increase market share and competitive advantage.",
+        "Own technical SEO strategy across 50+ localized websites and the national corporate site for a leading HVAC and plumbing brand, driving measurable gains in organic visibility and lead volume.",
+        "Led full development and launch of a redesigned national website, improving page speed scores by 30%+ and establishing a scalable, SEO-first CMS architecture.",
+        "Orchestrated migration of 20+ localized sites to a new enterprise CMS with comprehensive redirect mapping and schema implementation — maintaining ranking stability across all properties post-launch.",
+        "Developed standardized JSON-LD schema templates and semantic HTML specifications deployed across hundreds of service pages, reducing markup errors and improving structured data coverage.",
+        "Partnered with content, creative, and agency teams to build localized SEO strategies that strengthened GMB performance and expanded local market share across key service areas.",
       ],
     },
     {
       year: "2019 – 2022",
-      title: "SEO Manager",
+      title: "Digital Marketing Manager",
       company: "Swans Wharf Digital",
       bullets: [
-        "Managed portfolio of 16+ SEO clients ranging from local businesses to Fortune 500 companies with a focus on results and retention.",
-        "Created custom SEO & PPC strategies including on-site, off-site, and technical recommendations.",
-        "Worked across development, creative, and marketing departments through JIRA and GitLab.",
-        "Managed PPC campaigns across Google Ads, Facebook, Instagram, and Pinterest.",
+        "Managed a portfolio of 16+ SEO clients — from local businesses to Fortune 500 brands — consistently exceeding traffic and revenue KPIs with a 90%+ client retention rate.",
+        "Built custom SEO and PPC strategies combining on-site optimization, off-site authority building, and technical audits that drove double-digit organic growth across accounts.",
+        "Led cross-functional execution through JIRA and GitLab, coordinating developers, designers, and content teams to ship SEO improvements on schedule.",
+        "Managed paid campaigns across Google Ads, Facebook, Instagram, and Pinterest, optimizing spend allocation to maximize ROAS alongside organic initiatives.",
       ],
     },
     {
       year: "2019",
-      title: "SEO Manager",
+      title: "SEO Lead",
       company: "Student Universe",
       bullets: [
-        "Spearheaded custom SEO roadmap with on-site, off-site, and technical recommendations.",
-        "Managed GTM account with 500+ tags/triggers, coordinating with vendors and developers on tracking implementation.",
-        "Identified UX bottlenecks, site architecture issues, and page speed improvements with creative and dev teams.",
-        "Designed and implemented a new user-friendly site architecture.",
+        "Designed and executed a comprehensive SEO roadmap spanning on-site content, off-site link strategy, and technical infrastructure for a leading student travel platform.",
+        "Managed a GTM implementation with 500+ tags and triggers, partnering with third-party vendors and internal developers to build a reliable analytics and tracking foundation.",
+        "Collaborated with design and engineering teams to diagnose and resolve UX bottlenecks, site architecture gaps, and Core Web Vitals issues impacting conversion.",
+        "Redesigned the site's information architecture, improving crawl efficiency and user navigation across thousands of destination and deal pages.",
       ],
     },
     {
       year: "2017 – 2019",
-      title: "SEO Manager",
+      title: "SEO Account Manager",
       company: "MD Connect",
       bullets: [
-        "Managed 20+ SEO clients from local practices to big pharma with focus on results and retention.",
-        "Drove increased organic traffic and lead volume through blog content, backlinking, and technical SEO.",
-        "Created client dashboards showing true ROI from lead to successful patient procedure.",
-        "Introduced SEO road-mapping including schema markup during client onboarding.",
+        "Managed 20+ SEO clients across healthcare verticals — from solo practices to national pharma brands — growing organic traffic and patient lead volume across the portfolio.",
+        "Built full-funnel reporting dashboards tying organic traffic to lead generation to successful patient procedures, giving clients clear ROI visibility on their SEO investment.",
+        "Pioneered a structured onboarding process including SEO road-mapping and schema markup implementation, reducing time-to-first-results for new client engagements.",
+        "Drove content strategy through blog programs, backlink acquisition, and technical SEO audits that consistently moved clients into top-3 positions for high-intent local keywords.",
       ],
     },
     {
@@ -599,8 +600,8 @@ export default function Portfolio() {
       title: "SEO Specialist",
       company: "Incollect",
       bullets: [
-        "Developed eCommerce SEO strategy from the ground up, resulting in 110% growth in organic traffic and 5.5k backlinks within 8 months.",
-        "Managed PPC campaigns across Google Ads, Facebook, Instagram, and Pinterest.",
+        "Built the entire eCommerce SEO program from scratch for a luxury design marketplace, delivering 110% organic traffic growth and acquiring 5,500+ backlinks within 8 months.",
+        "Managed paid acquisition campaigns across Google Ads, Facebook, Instagram, and Pinterest, complementing organic growth with targeted paid visibility for high-value product categories.",
       ],
     },
   ];
@@ -631,33 +632,33 @@ export default function Portfolio() {
   const projects = [
     {
       title: "National Website Launch",
-      description: "Led development and launch of ARS/Rescue Rooter's national corporate website, integrating a modern CMS with optimized UX and comprehensive technical SEO from the ground up.",
+      description: "Led end-to-end development and launch of ARS/Rescue Rooter's national corporate website — defining SEO architecture, CMS requirements, URL structure, and internal linking framework from the ground up. Delivered 30%+ improvement in page speed scores.",
       tags: ["Technical SEO", "CMS", "UX", "Site Architecture"],
     },
     {
-      title: "Enterprise CMS Migration",
-      description: "Oversaw the migration of 20+ localized websites to a new enterprise CMS, managing redirect mapping, schema implementation, and post-migration monitoring across all properties.",
+      title: "Enterprise CMS Migration — 20+ Sites",
+      description: "Orchestrated the migration of 20+ localized websites to a new enterprise CMS, building comprehensive redirect maps, implementing schema markup across all properties, and monitoring post-migration performance to ensure zero ranking loss.",
       tags: ["Migrations", "Schema", "Multi-site", "Enterprise"],
     },
     {
-      title: "Local Service Page Framework",
-      description: "Designed a scalable local service page architecture supporting GMB optimization across hundreds of locations with standardized HTML structure and JSON-LD schema templates.",
-      tags: ["Local SEO", "JSON-LD", "GMB", "Content Architecture"],
+      title: "Scalable Schema & HTML Framework",
+      description: "Designed and documented standardized JSON-LD schema templates and semantic HTML specifications deployed across hundreds of HVAC, plumbing, and electrical service pages — reducing structured data errors and improving rich result eligibility at scale.",
+      tags: ["JSON-LD", "Schema", "Semantic HTML", "Standardization"],
     },
     {
-      title: "AI Search Optimization Strategy",
-      description: "Pioneered AEO strategy integrating structured data, entity-based content, and semantic SEO to improve visibility in ChatGPT, Google AI Overviews, and Perplexity results.",
-      tags: ["AEO", "Structured Data", "LLM Optimization"],
+      title: "Local Service Page Architecture",
+      description: "Architected a scalable local service page framework supporting GMB optimization across hundreds of locations, establishing content templates, standardized HTML structure, and location-specific schema for each market.",
+      tags: ["Local SEO", "GMB", "Content Architecture", "Multi-location"],
+    },
+    {
+      title: "AI Search Optimization (AEO) Program",
+      description: "Pioneered AEO strategy integrating entity-based content, structured data, and semantic SEO to improve brand visibility in AI-generated search results across ChatGPT, Google AI Overviews, and Perplexity.",
+      tags: ["AEO", "Structured Data", "LLM Optimization", "Entities"],
     },
     {
       title: "eCommerce SEO — 110% Growth",
-      description: "Built eCommerce SEO strategy from scratch at Incollect, achieving 110% organic traffic growth and acquiring 5,500 backlinks within 8 months.",
+      description: "Built the entire SEO program from scratch at Incollect, a luxury design marketplace. Achieved 110% organic traffic growth and acquired 5,500+ high-authority backlinks within 8 months through technical optimization and content strategy.",
       tags: ["eCommerce", "Link Building", "Content Strategy"],
-    },
-    {
-      title: "Freelance SEO Consulting",
-      description: "White-hat technical SEO consulting helping agencies and clients uncover overlooked technical issues, improve rankings, and boost bottom-line performance.",
-      tags: ["Freelance", "Technical Audits", "Web Design"],
     },
   ];
 
@@ -703,10 +704,10 @@ export default function Portfolio() {
           <div style={{ display: "grid", gridTemplateColumns: "1.2fr 0.8fr", gap: "48px", alignItems: "start" }}>
             <div>
               <p style={{ fontFamily: FONTS.body, fontSize: "15px", color: COLORS.cloud, lineHeight: 1.85, marginBottom: "18px" }}>
-                I'm an SEO Manager based in Salt Lake City with 9+ years of experience building scalable search strategies for multi-brand, multi-location businesses. I specialize in technical SEO, schema architecture, site migrations, and the emerging frontier of AI search optimization.
+                SEO Manager with 9+ years of experience driving organic growth for multi-brand, multi-location businesses. Built and led technical SEO programs across 50+ websites, orchestrated enterprise CMS migrations with zero ranking loss, and developed JSON-LD schema frameworks deployed at scale.
               </p>
               <p style={{ fontFamily: FONTS.body, fontSize: "15px", color: COLORS.ridge, lineHeight: 1.85, marginBottom: "18px" }}>
-                I've managed portfolios spanning local businesses to Fortune 500 companies, led national website launches, and overseen enterprise CMS migrations — always with a focus on measurable results and cross-team collaboration.
+                Now pioneering AI search optimization (AEO) strategies that position content for visibility in ChatGPT, Google AI Overviews, and Perplexity — bridging traditional SEO with the next generation of search.
               </p>
               <p style={{ fontFamily: FONTS.body, fontSize: "15px", color: COLORS.ridge, lineHeight: 1.85 }}>
                 When I'm not optimizing search visibility, you'll find me splitboarding in the Wasatch backcountry or paragliding above the ridgelines. I bring the same methodical, detail-oriented approach to both — whether mapping redirect chains or mapping a skin track.
@@ -800,7 +801,7 @@ export default function Portfolio() {
             </a>
           </div>
           <div style={{ display: "flex", justifyContent: "center", gap: "24px", marginTop: "28px", alignItems: "center" }}>
-            <a href="/Resume.pdf" download style={{
+            <a href="/James_Anderson_Resume.pdf" download style={{
               fontFamily: FONTS.mono, fontSize: "12px", color: COLORS.alpine, letterSpacing: "1px",
               display: "inline-flex", alignItems: "center", gap: "6px", textDecoration: "none",
             }}>
@@ -810,7 +811,7 @@ export default function Portfolio() {
               Download Resume
             </a>
             <span style={{ color: COLORS.trail, fontSize: "10px" }}>·</span>
-            <a href="https://www.linkedin.com/in/james-anderson-72426170/" style={{
+            <a href="https://linkedin.com/in/jamesanderson" style={{
               fontFamily: FONTS.mono, fontSize: "12px", color: COLORS.sky, letterSpacing: "1px", textDecoration: "none",
             }}>
               LinkedIn →
