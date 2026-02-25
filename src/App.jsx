@@ -284,7 +284,7 @@ function Hero() {
         }}>
           Technical SEO · Schema Architecture · AI Search Optimization
         </div>
-        <div style={{
+        <div className="hero-buttons" style={{
           display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap",
           animation: "fadeInUp 1s ease 0.6s forwards", opacity: 0, marginBottom: "40px",
         }}>
@@ -296,7 +296,7 @@ function Hero() {
           }}>
             Get in Touch
           </a>
-          <a href="/James_Anderson_Resume_2026.pdf" download style={{
+          <a href="/James_Anderson_Resume.pdf" download style={{
             fontFamily: FONTS.mono, fontSize: "12px", color: COLORS.summit, padding: "12px 28px",
             border: `1.5px solid ${COLORS.summit}44`, borderRadius: "6px", fontWeight: 500,
             letterSpacing: "1.5px", textTransform: "uppercase", textDecoration: "none",
@@ -354,23 +354,24 @@ function TimelineItem({ year, title, company, bullets, index }) {
   return (
     <div
       ref={ref}
+      className="timeline-item"
       style={{
         display: "grid", gridTemplateColumns: "140px 36px 1fr", gap: "0", marginBottom: "52px",
         opacity: visible ? 1 : 0, transform: visible ? "translateX(0)" : "translateX(-25px)",
         transition: `all 0.7s ease ${index * 0.12}s`,
       }}
     >
-      <div style={{ fontFamily: FONTS.mono, fontSize: "12px", color: COLORS.alpine, paddingTop: "5px", textAlign: "right" }}>
+      <div className="timeline-year" style={{ fontFamily: FONTS.mono, fontSize: "12px", color: COLORS.alpine, paddingTop: "5px", textAlign: "right" }}>
         {year}
       </div>
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <div className="timeline-line" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         <div style={{
           width: "10px", height: "10px", borderRadius: "50%", border: `2px solid ${COLORS.sunset}`,
           background: COLORS.stone, flexShrink: 0, marginTop: "5px",
         }} />
         <div style={{ width: "1.5px", flex: 1, background: `linear-gradient(to bottom, ${COLORS.sunset}33, transparent)` }} />
       </div>
-      <div style={{ paddingLeft: "20px" }}>
+      <div className="timeline-content" style={{ paddingLeft: "20px" }}>
         <h3 style={{ fontFamily: FONTS.display, fontSize: "21px", color: COLORS.snow, margin: "0 0 4px 0", fontWeight: 600 }}>
           {title}
         </h3>
@@ -502,7 +503,7 @@ function AEOSection() {
       <h3 style={{ fontFamily: FONTS.display, fontSize: "24px", color: COLORS.snow, margin: "0 0 16px", fontWeight: 600 }}>
         AI Search Optimization (AEO)
       </h3>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
+      <div className="aeo-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
         {[
           "Architect AEO strategies for ChatGPT, Google AI Overviews & Perplexity",
           "Build entity-based content & schema frameworks for machine understanding",
@@ -687,8 +688,43 @@ export default function Portfolio() {
         }
 
         @media (max-width: 768px) {
-          nav > div:last-child { gap: 14px !important; }
-          nav > div:last-child a { font-size: 10px !important; letter-spacing: 1.5px !important; }
+          /* Nav */
+          nav { padding: 12px 16px !important; }
+          nav > div:first-child span { font-size: 15px !important; }
+          nav > div:last-child { gap: 12px !important; }
+          nav > div:last-child a { font-size: 9px !important; letter-spacing: 1px !important; }
+
+          /* Sections */
+          section { padding-left: 20px !important; padding-right: 20px !important; }
+
+          /* About - stack columns */
+          .about-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+
+          /* Timeline - simplify */
+          .timeline-item { grid-template-columns: 1fr !important; gap: 0 !important; }
+          .timeline-year { text-align: left !important; margin-bottom: 4px !important; }
+          .timeline-line { display: none !important; }
+          .timeline-content { padding-left: 0 !important; }
+
+          /* Skills grid */
+          .skills-grid { grid-template-columns: 1fr !important; }
+
+          /* Projects grid */
+          .projects-grid { grid-template-columns: 1fr !important; }
+
+          /* AEO grid */
+          .aeo-grid { grid-template-columns: 1fr !important; }
+
+          /* Hero buttons */
+          .hero-buttons { flex-direction: column !important; align-items: center !important; }
+
+          /* Contact buttons */
+          .contact-buttons { flex-direction: column !important; align-items: center !important; }
+        }
+        @media (max-width: 480px) {
+          nav > div:last-child a { font-size: 8px !important; letter-spacing: 0.5px !important; }
+          h1 { font-size: 44px !important; }
+          h2 { font-size: 28px !important; }
         }
       `}</style>
 
@@ -701,7 +737,7 @@ export default function Portfolio() {
         <MountainDivider />
         <Section id="about" style={{ maxWidth: "920px", margin: "0 auto", padding: "100px 40px" }}>
           <SectionTitle label="01 / Base Camp" title="About Me" />
-          <div style={{ display: "grid", gridTemplateColumns: "1.2fr 0.8fr", gap: "48px", alignItems: "start" }}>
+          <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "1.2fr 0.8fr", gap: "48px", alignItems: "start" }}>
             <div>
               <p style={{ fontFamily: FONTS.body, fontSize: "15px", color: COLORS.cloud, lineHeight: 1.85, marginBottom: "18px" }}>
                 SEO Manager with 9+ years of experience driving organic growth for multi-brand, multi-location businesses. Built and led technical SEO programs across 50+ websites, orchestrated enterprise CMS migrations with zero ranking loss, and developed JSON-LD schema frameworks deployed at scale.
@@ -756,7 +792,7 @@ export default function Portfolio() {
         <Section id="skills" style={{ maxWidth: "920px", margin: "0 auto", padding: "100px 40px" }}>
           <SectionTitle label="03 / Gear List" title="Skills & Tools" />
           <AEOSection />
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px" }}>
+          <div className="skills-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px" }}>
             {skillCategories.map((cat, i) => (
               <SkillCategory key={cat.title} {...cat} index={i} />
             ))}
@@ -767,7 +803,7 @@ export default function Portfolio() {
       {/* ===== PROJECTS ===== */}
       <Section id="projects" style={{ maxWidth: "920px", margin: "0 auto", padding: "100px 40px" }}>
         <SectionTitle label="04 / Summit Log" title="Projects & Impact" />
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(360px, 1fr))", gap: "20px" }}>
+        <div className="projects-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(360px, 100%), 1fr))", gap: "20px" }}>
           {projects.map((project, i) => (
             <ProjectCard key={project.title} {...project} index={i} />
           ))}
@@ -784,7 +820,7 @@ export default function Portfolio() {
           }}>
             Currently exploring new opportunities. Whether you're looking for an SEO leader, need a freelance technical audit, or just want to talk shop — I'd love to hear from you.
           </p>
-          <div style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
+          <div className="contact-buttons" style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
             <a href="mailto:jkanderson09@gmail.com" style={{
               fontFamily: FONTS.mono, fontSize: "13px", color: COLORS.snow, padding: "14px 32px",
               background: COLORS.sunset, borderRadius: "8px", fontWeight: 500,
@@ -801,7 +837,7 @@ export default function Portfolio() {
             </a>
           </div>
           <div style={{ display: "flex", justifyContent: "center", gap: "24px", marginTop: "28px", alignItems: "center" }}>
-            <a href="/James_Anderson_Resume_2026.pdf" download style={{
+            <a href="/James_Anderson_Resume.pdf" download style={{
               fontFamily: FONTS.mono, fontSize: "12px", color: COLORS.alpine, letterSpacing: "1px",
               display: "inline-flex", alignItems: "center", gap: "6px", textDecoration: "none",
             }}>
@@ -811,7 +847,7 @@ export default function Portfolio() {
               Download Resume
             </a>
             <span style={{ color: COLORS.trail, fontSize: "10px" }}>·</span>
-            <a href="https://www.linkedin.com/in/james-anderson-72426170/" style={{
+            <a href="https://linkedin.com/in/jamesanderson" style={{
               fontFamily: FONTS.mono, fontSize: "12px", color: COLORS.sky, letterSpacing: "1px", textDecoration: "none",
             }}>
               LinkedIn →
