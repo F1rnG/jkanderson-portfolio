@@ -130,6 +130,7 @@ function Nav({ activeSection }) {
 
   return (
     <nav
+      aria-label="Main navigation"
       style={{
         position: "fixed",
         top: 0,
@@ -352,7 +353,7 @@ function SectionTitle({ label, title }) {
 function TimelineItem({ year, title, company, bullets, index }) {
   const [ref, visible] = useInView(0.15);
   return (
-    <div
+    <article
       ref={ref}
       className="timeline-item"
       style={{
@@ -393,7 +394,7 @@ function TimelineItem({ year, title, company, bullets, index }) {
           ))}
         </ul>
       </div>
-    </div>
+    </article>
   );
 }
 
@@ -438,7 +439,7 @@ function ProjectCard({ title, description, tags, index }) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <div
+    <article
       ref={ref}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -475,7 +476,7 @@ function ProjectCard({ title, description, tags, index }) {
           </span>
         ))}
       </div>
-    </div>
+    </article>
   );
 }
 
@@ -729,9 +730,12 @@ export default function Portfolio() {
       `}</style>
 
       <TopoBackground />
-      <Nav activeSection={activeSection} />
-      <Hero />
+      <header>
+        <Nav activeSection={activeSection} />
+        <Hero />
+      </header>
 
+      <main>
       {/* ===== ABOUT ===== */}
       <div style={{ background: COLORS.stone, position: "relative" }}>
         <MountainDivider />
@@ -855,6 +859,7 @@ export default function Portfolio() {
           </div>
         </Section>
       </div>
+      </main>
 
       {/* ===== FOOTER ===== */}
       <footer style={{ borderTop: `1px solid ${COLORS.trail}44`, padding: "40px", textAlign: "center" }}>
