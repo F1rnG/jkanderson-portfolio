@@ -176,6 +176,7 @@
         <a href="#experience" class="nav-link" data-section="experience">Experience</a>
         <a href="#skills" class="nav-link" data-section="skills">Skills</a>
         <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#blog" class="nav-link" data-section="blog">Blog</a>
         <a href="#contact" class="nav-link" data-section="contact">Contact</a>
       </div>
     </nav>
@@ -654,11 +655,37 @@
         </div>
       </section>
 
+      <!-- ===== BLOG ===== -->
+      <section id="blog" class="section">
+        <div class="section-title">
+          <div class="section-title-label">05 / Field Notes</div>
+          <h2>Blog</h2>
+        </div>
+        <div class="blog-grid">
+          <a href="/blog/optimize-ai-answer-engines-2026" class="blog-card">
+            <div class="blog-card-meta">
+              <time datetime="2026-02-28">Feb 28, 2026</time>
+              <span class="separator">&bull;</span>
+              <span>12 min read</span>
+            </div>
+            <h3>How to Optimize for AI Answer Engines in 2026</h3>
+            <p class="blog-card-excerpt">A practitioner's guide to AEO — not theory, not a tool pitch. What actually works to get your brand cited in ChatGPT, Google AI Overviews, and Perplexity, based on building an AEO program across 50+ websites.</p>
+            <div class="blog-card-tags">
+              <span class="blog-card-tag">AEO</span>
+              <span class="blog-card-tag">AI Search</span>
+              <span class="blog-card-tag">Structured Data</span>
+              <span class="blog-card-tag">Entity SEO</span>
+            </div>
+            <span class="blog-card-link">Read article &rarr;</span>
+          </a>
+        </div>
+      </section>
+
       <!-- ===== CONTACT ===== -->
       <div class="section-contact-wrap">
         <section id="contact" class="section section-contact">
           <div class="section-title">
-            <div class="section-title-label">05 / Signal Fire</div>
+            <div class="section-title-label">06 / Signal Fire</div>
             <h2>Let's Connect</h2>
           </div>
           <p class="contact-text">Currently exploring new opportunities. Whether you're looking for an SEO leader, need a freelance technical audit, or just want to talk shop — I'd love to hear from you.</p>
@@ -736,7 +763,7 @@
           });
         }, { threshold: 0.08 });
 
-        document.querySelectorAll('.section, .timeline-item, .aeo-section, .skill-category, .project-card').forEach(function(el) {
+        document.querySelectorAll('.section, .timeline-item, .aeo-section, .skill-category, .project-card, .blog-card').forEach(function(el) {
           fadeObserver.observe(el);
         });
 

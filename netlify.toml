@@ -15,6 +15,11 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
+  for = "/blog/blog.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
   for = "*.pdf"
   [headers.values]
     Cache-Control = "public, max-age=86400"
