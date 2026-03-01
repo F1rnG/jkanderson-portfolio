@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 — Trail Not Found | James Anderson</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <style>
+:root{--stone:#141412;--bark:#1f1e1a;--trail:#322f28;--ridge:#8b7d6b;--summit:#c4a97d;--snow:#f5f0e8;--alpine:#4a7c6f;--sunset:#c7603d;--ember:#a34e2e;--font-display:'Playfair Display',serif;--font-body:'DM Sans',sans-serif;--font-mono:'IBM Plex Mono',monospace}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--stone);font-family:var(--font-body);color:var(--snow);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;position:relative}
+a{color:inherit;text-decoration:none}
+::selection{background:rgba(199,96,61,.27);color:var(--snow)}
+
+.error-page{text-align:center;padding:40px 24px;position:relative;z-index:2}
+
+.error-code{font-family:var(--font-display);font-size:clamp(100px,20vw,180px);color:var(--snow);font-weight:400;line-height:1;margin-bottom:8px;opacity:0.08;position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);z-index:0;pointer-events:none}
+
+.error-icon{margin-bottom:32px;opacity:0.6}
+
+.error-label{font-family:var(--font-mono);font-size:11px;color:var(--alpine);letter-spacing:4px;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;justify-content:center;gap:14px}
+.error-label::before,.error-label::after{content:'';display:inline-block;width:24px;height:1px;background:var(--alpine)}
+
+.error-title{font-family:var(--font-display);font-size:clamp(28px,4vw,42px);color:var(--snow);font-weight:400;margin-bottom:16px;line-height:1.2}
+.error-title span{color:var(--summit);font-style:italic}
+
+.error-text{font-size:15px;color:var(--ridge);line-height:1.7;max-width:420px;margin:0 auto 40px}
+
+.error-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+.btn-home{font-family:var(--font-mono);font-size:12px;color:var(--snow);padding:12px 28px;background:var(--sunset);border-radius:6px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;transition:all .3s;display:inline-block}
+.btn-home:hover{background:var(--ember);transform:translateY(-1px)}
+
+.btn-back{font-family:var(--font-mono);font-size:12px;color:var(--summit);padding:12px 28px;border:1.5px solid rgba(196,169,125,.27);border-radius:6px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;transition:all .3s;display:inline-block;cursor:pointer;background:none}
+.btn-back:hover{border-color:rgba(196,169,125,.5);background:rgba(196,169,125,.08);transform:translateY(-1px)}
+
+.error-coords{font-family:var(--font-mono);font-size:10px;color:rgba(139,125,107,.35);letter-spacing:4px;margin-top:48px;text-transform:uppercase}
+
+.mountain-bg{position:fixed;bottom:0;left:0;right:0;z-index:0;opacity:0.06}
+.mountain-bg svg{width:100%;height:auto;display:block}
+
+@media(max-width:480px){.error-actions{flex-direction:column;align-items:center}}
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400&display=swap" /></noscript>
+</head>
+<body>
+
+<div class="error-code">404</div>
+
+<div class="error-page">
+    <div class="error-icon">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 38L18 14L28 30L34 22L42 38" stroke="#c4a97d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="36" cy="12" r="3" stroke="#4a7c6f" stroke-width="1.5"/>
+        </svg>
+    </div>
+
+    <div class="error-label">Trail Not Found</div>
+
+    <h1 class="error-title">This path leads <span>nowhere</span></h1>
+
+    <p class="error-text">The page you're looking for doesn't exist, was moved, or wandered off the map. Let's get you back on the trail.</p>
+
+    <div class="error-actions">
+        <a href="/" class="btn-home">Base Camp</a>
+        <button onclick="history.back()" class="btn-back">Go Back</button>
+    </div>
+
+    <div class="error-coords">40.7608° N &middot; 111.8910° W</div>
+</div>
+
+<div class="mountain-bg">
+    <svg viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,320 L0,200 Q180,80 360,180 Q540,280 720,140 Q900,0 1080,120 Q1260,240 1440,160 L1440,320 Z" fill="#c4a97d"/>
+    </svg>
+</div>
+
+</body>
+</html>
