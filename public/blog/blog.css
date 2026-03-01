@@ -1,5 +1,4 @@
-/* ========== BLOG FONTS ========== */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap');
+/* ========== BLOG FONTS (loaded via <link> in HTML for parallel fetching) ========== */
 
 /* ========== BLOG DESIGN TOKENS ========== */
 :root {
