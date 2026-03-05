@@ -116,13 +116,13 @@
 
     <p>When I took over schema implementation across our portfolio of 50+ localized websites and a national corporate site, the first thing I did was audit every page's structured data. What I found was a pattern I have since seen repeated across nearly every multi-location business I have worked with or consulted for: schema that was technically present but architecturally broken.</p>
 
-    <p><strong>Copy-paste duplication with hardcoded values that drift.</strong> The original schema had been manually added to a template file, then copied across location pages with the expectation that content editors would update the location-specific fields. Some did. Most did not. The result was dozens of pages in Phoenix displaying schema that claimed the business was in Atlanta, because the template had been cloned from the Atlanta page and only partially updated.</p>
+    <p><strong>Copy-paste duplication with hardcoded values that drift.</strong> The original schema had been manually added to a template file, then copied across location pages with the expectation that content editors would update the location-specific fields. Some did. Most did not. The result was dozens of pages in Phoenix displaying schema that claimed the business was in Atlanta, because the template had been cloned from the Atlanta page and only partially updated. This pattern is even more damaging during a <a href="/blog/site-migrations-technical-seo-at-scale">site migration</a>, where schema discrepancies multiply across every page being moved simultaneously.</p>
 
     <p><strong>Inconsistent NAP data between schema and page content.</strong> The schema said one phone number. The page header said another. The footer said a third. Google's structured data guidelines explicitly state that schema must reflect the visible content on the page. When these signals conflict, Google either ignores the schema entirely or, worse, displays the wrong information in search results.</p>
 
     <p><strong>Conflicting entity signals.</strong> The corporate homepage used Organization schema. That part was correct. But individual location pages also used Organization schema instead of LocalBusiness, which meant Google had no way to distinguish the parent brand entity from its local branches. Several location pages had both Organization and LocalBusiness markup with conflicting information, sending completely contradictory signals about what the page represented.</p>
 
-    <p><strong>Missing parent-child relationships.</strong> Even on location pages that correctly used LocalBusiness, none of them included a <code>branchOf</code> or <code>parentOrganization</code> reference back to the corporate entity. Each location appeared as a standalone, unrelated business rather than a branch of a national brand. This fragmented our entity graph and weakened the authority signal that should flow from the parent brand to each location.</p>
+    <p><strong>Missing parent-child relationships.</strong> Even on location pages that correctly used LocalBusiness, none of them included a <code>branchOf</code> or <code>parentOrganization</code> reference back to the corporate entity. Each location appeared as a standalone, unrelated business rather than a branch of a national brand. This fragmented our entity graph and weakened the authority signal that should flow from the parent brand to each location. Getting this entity hierarchy right is foundational to the broader <a href="/blog/local-seo-at-scale">local SEO system</a> that makes multi-location brands visible in local search.</p>
 
     <p><strong>No validation or monitoring process.</strong> There was no system for catching schema errors after deployment. Errors compounded silently. By the time I ran the initial audit, I found over 200 structured data errors across the portfolio &mdash; many of which had been live for months without anyone noticing.</p>
 
@@ -390,6 +390,27 @@
     <p>Schema architecture for multi-location businesses is not a one-time project. It is a system that needs to be designed, built, maintained, and evolved over time. The investment pays for itself many times over in reduced errors, improved search visibility, and a stronger entity presence across both traditional and AI-powered search.</p>
 
 </article>
+
+<section class="related-posts">
+    <h3>Related Posts</h3>
+    <div class="related-posts-grid">
+        <a href="/blog/local-seo-at-scale" class="related-post-card">
+            <span class="related-post-label">Local SEO</span>
+            <h4>Local SEO at Scale: Managing Hundreds of Locations Without Losing Your Mind</h4>
+            <span class="related-post-link">Read article &rarr;</span>
+        </a>
+        <a href="/blog/site-migrations-technical-seo-at-scale" class="related-post-card">
+            <span class="related-post-label">Technical SEO</span>
+            <h4>What 20+ Site Migrations Taught Me About Technical SEO at Scale</h4>
+            <span class="related-post-link">Read article &rarr;</span>
+        </a>
+        <a href="/blog/optimize-ai-answer-engines-2026" class="related-post-card">
+            <span class="related-post-label">AEO</span>
+            <h4>How to Optimize for AI Answer Engines in 2026</h4>
+            <span class="related-post-link">Read article &rarr;</span>
+        </a>
+    </div>
+</section>
 
 <footer class="blog-footer">
     <div class="author-card">

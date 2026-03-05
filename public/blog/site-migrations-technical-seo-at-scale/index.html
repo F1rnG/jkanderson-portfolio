@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What 20+ Site Migrations Taught Me About Technical SEO at Scale | James Anderson</title>
+    <meta name="description" content="Lessons from migrating 20+ websites to an enterprise CMS without losing rankings. A practitioner's guide to redirect mapping, crawl budget, schema preservation, and post-migration monitoring.">
+    <meta name="author" content="James Anderson">
+    <link rel="canonical" href="https://jkanderson.co/blog/site-migrations-technical-seo-at-scale">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="What 20+ Site Migrations Taught Me About Technical SEO at Scale">
+    <meta property="og:description" content="Lessons from migrating 20+ websites to an enterprise CMS without losing rankings. A practitioner's guide to redirect mapping, crawl budget, schema preservation, and post-migration monitoring.">
+    <meta property="og:url" content="https://jkanderson.co/blog/site-migrations-technical-seo-at-scale">
+    <meta property="og:site_name" content="James Anderson">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What 20+ Site Migrations Taught Me About Technical SEO at Scale">
+    <meta name="twitter:description" content="Lessons from migrating 20+ websites to an enterprise CMS without losing rankings. Redirect mapping, crawl budget, schema preservation, and post-migration monitoring.">
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+
+    <!-- Fonts (async to avoid render-blocking) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/blog/blog.css">
+
+    <!-- JSON-LD Article Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "What 20+ Site Migrations Taught Me About Technical SEO at Scale",
+        "description": "Lessons from migrating 20+ websites to an enterprise CMS without losing rankings. A practitioner's guide to redirect mapping, crawl budget, schema preservation, and post-migration monitoring.",
+        "author": {
+            "@type": "Person",
+            "name": "James Anderson",
+            "url": "https://jkanderson.co",
+            "jobTitle": "SEO Manager",
+            "knowsAbout": ["Technical SEO", "Site Migrations", "Redirect Mapping", "CMS Migration", "Enterprise SEO"]
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": "James Anderson",
+            "url": "https://jkanderson.co"
+        },
+        "datePublished": "2025-10-20",
+        "dateModified": "2025-10-20",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://jkanderson.co/blog/site-migrations-technical-seo-at-scale"
+        },
+        "about": [
+            {
+                "@type": "Thing",
+                "name": "Site Migration",
+                "description": "The process of moving a website from one platform, domain, or structure to another while preserving organic search equity."
+            },
+            {
+                "@type": "Thing",
+                "name": "Technical SEO",
+                "description": "The practice of optimizing a website's technical infrastructure to improve crawlability, indexation, and search engine performance."
+            }
+        ],
+        "keywords": ["site migration", "technical SEO", "redirect mapping", "CMS migration", "enterprise SEO", "crawl budget", "301 redirects"]
+    }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2WD891BER7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2WD891BER7');
+    </script>
+</head>
+<body>
+
+<nav class="blog-nav">
+    <a href="/" class="blog-nav-logo">J. Anderson</a>
+    <a href="/" class="blog-nav-back">&larr; Back to Portfolio</a>
+</nav>
+
+<header class="blog-hero">
+    <div class="blog-hero-label">Technical SEO</div>
+    <h1>What 20+ Site Migrations Taught Me About Technical SEO at Scale</h1>
+    <div class="blog-hero-meta">
+        <span>James Anderson</span>
+        <span>&middot;</span>
+        <span><time datetime="2025-10-20">October 20, 2025</time></span>
+        <span>&middot;</span>
+        <span>12 min read</span>
+    </div>
+    <div class="blog-hero-divider"></div>
+    <p class="blog-hero-intro">
+        I have migrated over 20 websites to an enterprise CMS platform for a national brand. Some of those migrations went smoothly. Some did not. Every single one taught me something about what actually matters when you move a site at scale &mdash; and what the standard migration guides leave out. This is what I know now that I wish I knew before migration number one.
+    </p>
+</header>
+
+<article class="blog-article">
+
+    <!-- SECTION 1 -->
+    <span class="section-num">01</span>
+    <h2>Why Migrations Are the Highest-Stakes Work in SEO</h2>
+
+    <p>When you tell leadership you need to migrate the website, you are asking them to trust you with the company's organic revenue. If you get it wrong, recovery can take months &mdash; or may never fully happen. That is not hyperbole. I have seen migrations erase years of organic equity overnight because the wrong assumptions were made about what could be skipped.</p>
+
+    <p>A bad migration is uniquely destructive because everything changes at once. URLs change. Templates change. Content structure changes. Internal links change. Schema markup changes. Server configuration changes. And search engines have to re-evaluate the entire site simultaneously rather than absorbing incremental updates over time. Google does not process a site migration the way it processes a single page update. It has to recrawl, reindex, and reassess the entire domain &mdash; and during that reprocessing window, your rankings are vulnerable.</p>
+
+    <p>Other SEO work is incremental. You optimize a title tag and watch one page's performance. You fix a crawl issue and see a handful of pages recover. Migration is the opposite. It is a binary event. You either preserved your organic equity through the transition or you did not. And you will not know which outcome you got for at least two to four weeks after launch.</p>
+
+    <div class="callout">
+        <div class="callout-label">The Stakes</div>
+        <p>Rankings, traffic, leads, and revenue are all on the line during a migration. The organic channel often represents 40-60% of total website traffic. A migration that drops organic performance by even 20% can translate to millions in lost revenue for an enterprise brand. That is why migrations deserve more planning than any other SEO project.</p>
+    </div>
+
+    <!-- SECTION 2 -->
+    <span class="section-num">02</span>
+    <h2>The Pre-Migration Audit Nobody Wants to Do</h2>
+
+    <p>The success or failure of a migration is determined before launch day. It is determined in the unglamorous, tedious audit phase that most teams want to rush through. Every migration failure I have been involved in &mdash; or cleaned up after &mdash; traces back to an incomplete pre-migration audit, not bad execution on launch day.</p>
+
+    <p><strong>Crawl the existing site completely.</strong> Not just the pages in the sitemap. Every URL. Use Screaming Frog or Sitebulb to discover every HTML page, PDF, image, and resource the site serves. Sitemaps are aspirational; they show what you want indexed. A full crawl shows what actually exists. On more than one migration, I found hundreds of live URLs that were not in any sitemap but were receiving organic traffic.</p>
+
+    <p><strong>Document every URL that receives organic traffic.</strong> Pull Google Search Console performance data for at least 16 months (to capture seasonal patterns) and map it to your full URL list. Do not just look at the top 50 pages. The long tail matters. I have seen migrations that preserved the top pages perfectly but broke hundreds of long-tail URLs that collectively drove 30% of organic traffic. Those losses are invisible until someone notices the aggregate numbers declining weeks later.</p>
+
+    <p><strong>Map current rankings and keyword positions as your baseline.</strong> Before anything changes, document where you rank for your priority keywords. You need a comparison point for post-migration monitoring. Without this baseline, you cannot distinguish between a migration-related drop and a normal ranking fluctuation.</p>
+
+    <p><strong>Catalog all existing schema markup and structured data.</strong> Crawl for every JSON-LD block, microdata element, and RDFa annotation on the site. Document which schema types are deployed, which pages they appear on, and what data they contain. Schema is one of the most commonly lost elements during a migration because it lives in the template layer, and new templates rarely replicate old schema perfectly.</p>
+
+    <p><strong>Identify existing redirect chains.</strong> If the site has been through previous migrations or URL restructuring, there are likely redirect chains &mdash; URLs that redirect to URLs that redirect to other URLs. Map these chains completely. The migration is your opportunity to clean them up rather than add another hop to the chain.</p>
+
+    <p><strong>Document external backlinks pointing to specific URLs.</strong> Export your backlink data from Ahrefs or SEMRush and map it to your URL inventory. Any URL with significant external backlinks absolutely cannot be broken during migration. These are the pages where a redirect failure directly costs you link equity that took years to accumulate.</p>
+
+    <p><strong>Audit internal linking patterns.</strong> Understand how link equity flows through the current site architecture. Which pages are the most internally linked? Which hub pages distribute authority to deeper content? The new site structure needs to preserve these equity flows, not just the individual URLs.</p>
+
+    <div class="callout">
+        <div class="callout-label">The Boring Part That Saves You</div>
+        <p>This audit typically takes two to four weeks of focused work for a large site. Most teams push back on the timeline because they want to start building. Resist that pressure. Every hour spent in the audit phase saves ten hours of post-migration firefighting. I have never regretted being thorough in the audit. I have always regretted cutting it short.</p>
+    </div>
+
+    <!-- SECTION 3 -->
+    <span class="section-num">03</span>
+    <h2>Redirect Mapping Is Not a Spreadsheet Exercise</h2>
+
+    <p>Redirect mapping is where most migrations go wrong. Not because teams forget to do it, but because they approach it the wrong way. A spreadsheet with 5,000 rows of one-to-one URL mappings is not a redirect strategy. It is a liability.</p>
+
+    <h3>Common mistakes</h3>
+
+    <p><strong>Building one-to-one redirects manually in a spreadsheet without logic.</strong> This does not scale. For a multi-site migration with thousands of URLs, manual mapping introduces human error at every row. Typos, missed pages, and inconsistent logic compound into hundreds of broken redirects on launch day.</p>
+
+    <p><strong>Redirecting everything to the homepage.</strong> This is the lazy approach that destroys topical relevance. When Google follows a redirect from a page about "AC repair in Phoenix" to your homepage, it does not transfer the topical relevance. That page's organic equity is effectively gone. Every URL should redirect to its closest equivalent on the new site.</p>
+
+    <p><strong>Chaining redirects through multiple hops.</strong> Every hop in a redirect chain costs crawl budget and dilutes link equity. Google follows redirect chains, but with diminishing patience. After three or four hops, there is evidence that Google may stop following the chain entirely. A migration that adds a new redirect on top of existing chains compounds the problem.</p>
+
+    <p><strong>Forgetting to redirect non-HTML assets.</strong> PDFs, images, and downloadable resources accumulate backlinks over the years. If your site has PDF guides or whitepapers that have been linked to by external sites, those URLs need redirects just like HTML pages. I have seen migrations lose significant link equity because nobody thought to map redirects for PDF files that had hundreds of backlinks.</p>
+
+    <p><strong>Assuming the CMS will handle redirects automatically.</strong> No CMS handles redirects at migration scale without configuration. Relying on auto-generated redirects from a CMS plugin or module without testing is a recipe for mass 404 errors on launch day.</p>
+
+    <h3>The right approach</h3>
+
+    <p>Build a redirect mapping system that works from URL pattern logic, not individual URLs. For a multi-site migration, you need rules-based redirect logic that can handle hundreds or thousands of URLs programmatically.</p>
+
+    <div class="code-block">
+        <span class="code-label">Pattern-Based Redirect Rules vs Manual Mapping</span>
+        <code><pre># Manual approach (does not scale):
+/old-site/phoenix/ac-repair    ->  /phoenix-az/air-conditioning-repair
+/old-site/phoenix/heating      ->  /phoenix-az/heating-repair
+/old-site/phoenix/plumbing     ->  /phoenix-az/plumbing-services
+/old-site/tucson/ac-repair     ->  /tucson-az/air-conditioning-repair
+# ... repeated for every city and service. Thousands of lines.
+
+# Pattern-based approach (scales):
+/old-site/([a-z-]+)/ac-repair     ->  /$1-az/air-conditioning-repair
+/old-site/([a-z-]+)/heating       ->  /$1-az/heating-repair
+/old-site/([a-z-]+)/plumbing      ->  /$1-az/plumbing-services
+
+# Catch-all for city landing pages:
+/old-site/([a-z-]+)/?             ->  /$1-az/
+
+# One rule covers dozens of cities instead of hundreds of lines.</pre></code>
+    </div>
+
+    <p>Pattern-based rules reduce your redirect map from thousands of individual entries to dozens of logical rules. Each rule can be tested against a sample of URLs before deployment. And when a new city is added, the rules handle it automatically without manual updates.</p>
+
+    <p><strong>Test redirects in staging before going live.</strong> Deploy your redirect rules to a staging environment and crawl every old URL against it. Verify that every redirect resolves to the correct destination with a single 301 hop. Any URL that returns a 404 or chains through multiple redirects needs to be fixed before launch.</p>
+
+    <p><strong>Keep old redirects in place for at least 12 months after migration.</strong> Some guides suggest removing redirects after 90 days. Do not do this. Google can take months to fully process a migration, and external sites may continue linking to old URLs indefinitely. Twelve months is the minimum. For high-authority URLs with significant backlink profiles, consider keeping redirects permanently.</p>
+
+    <!-- SECTION 4 -->
+    <span class="section-num">04</span>
+    <h2>The Template Problem</h2>
+
+    <p>New CMS templates are designed by developers who are thinking about visual design and content management workflows. They are not thinking about SEO requirements unless someone tells them exactly what those requirements are. This is the section that separates practitioners from theorists, because it requires having the conversation with your development team before they start building &mdash; not after the templates are already in QA.</p>
+
+    <p><strong>Every page template needs proper heading hierarchy.</strong> One H1 per page. H2s for major sections. H3s for subsections. This sounds basic, but I have reviewed templates where the designer used H2 tags for visual styling in the sidebar, or where the CMS generated multiple H1 tags from different content fields. The heading hierarchy in the new template must be semantically correct, not just visually correct.</p>
+
+    <p><strong>Title tags and meta descriptions must be editable per page.</strong> Templates that auto-generate title tags from a single CMS field ("Page Title | Brand Name") strip away years of carefully optimized title tags. Every page needs its own editable title tag and meta description field that migrated content can map into directly.</p>
+
+    <p><strong>Canonical tags must be self-referencing by default and overridable when needed.</strong> The default behavior should be a self-referencing canonical on every page. But the CMS needs to support overriding the canonical for pages where you need to point it elsewhere &mdash; paginated content, filtered views, or intentionally duplicated pages.</p>
+
+    <p><strong>Build schema markup into the template layer rather than adding it manually after launch.</strong> This is critical. If you wait until after migration to add schema, you lose structured data visibility during the reindexing window when you need it most. The new templates should generate the same schema types as the old site, populated by CMS fields. I covered this in depth in my piece on <a href="/blog/scalable-schema-multi-location">building a scalable schema markup architecture</a> &mdash; the template system I describe there was originally designed during a migration, specifically to avoid losing schema coverage during the transition.</p>
+
+    <p><strong>Verify that new templates generate clean, crawlable HTML.</strong> No critical content hidden behind JavaScript rendering that requires additional fetch cycles. No navigation or internal links loaded asynchronously in a way that search engines cannot discover on the initial crawl. Run the new templates through Google's URL Inspection tool and compare the rendered HTML against the raw HTML to identify any gaps.</p>
+
+    <p><strong>Preserve internal links in navigation, footers, and sidebars.</strong> The template's global elements (header navigation, footer links, sidebar widgets) should maintain the same internal linking structure as the old site. If the old site's footer linked to all service category pages and the new template's footer links only to top-level pages, you have changed the internal link equity distribution &mdash; which changes how authority flows to deeper pages.</p>
+
+    <div class="callout">
+        <div class="callout-label">The Conversation to Have</div>
+        <p>Before your dev team writes a single line of template code, give them a written SEO requirements document covering heading hierarchy, meta tag editability, canonical behavior, schema markup requirements, rendering method, and internal linking structure. If they build the templates without this document, you will spend weeks retrofitting SEO requirements into templates that were not designed for them.</p>
+    </div>
+
+    <!-- SECTION 5 -->
+    <span class="section-num">05</span>
+    <h2>Content Freezes and the Timing Problem</h2>
+
+    <p>Migrations do not happen in a vacuum. While you are migrating the site, the business keeps running. Content editors want to update pages. Marketing wants to launch new campaigns. Sales needs landing pages for an upcoming promotion. And the migration needs a stable target to migrate against. This operational challenge is often overlooked in migration planning and causes more real-world problems than any technical issue.</p>
+
+    <p><strong>Implement a content freeze window and communicate it early.</strong> A content freeze means no new pages are published and no existing pages are modified on the old site during the migration window. This gives you a stable snapshot to migrate against. Communicate the freeze to every stakeholder who touches the website at least four weeks before it begins. Content editors, marketing teams, product managers &mdash; everyone needs to plan their publishing schedule around the freeze.</p>
+
+    <p><strong>Have a process for tracking delta changes.</strong> Even with a freeze, there will be exceptions. Emergency content updates, legal compliance changes, and time-sensitive promotions may need to go live during the migration window. You need a formal process for tracking these changes so they can be replicated on the new site before launch. A shared document where stakeholders log any content changes made during the freeze period prevents updates from falling through the cracks.</p>
+
+    <p><strong>Coordinate launch timing with business priorities.</strong> Do not launch during your biggest sales month. Do not launch the week before a major marketing campaign. Do not launch during the holiday season. The two to four week post-migration monitoring period will consume significant team bandwidth, and if organic traffic dips temporarily (which is normal), you do not want that dip coinciding with the business's peak revenue period.</p>
+
+    <p><strong>Have a rollback plan.</strong> If something goes catastrophically wrong on launch day &mdash; mass 404 errors, server failures, critical template bugs &mdash; you need the ability to revert to the old site within hours, not days. This means keeping the old site's infrastructure live (but not publicly accessible) for at least two weeks after launch. A rollback plan you have never tested is not a rollback plan. Test it in staging before migration day.</p>
+
+    <div class="callout">
+        <div class="callout-label">Operational Maturity</div>
+        <p>The content freeze conversation reveals how mature an organization is at managing cross-functional projects. If you cannot get stakeholders to agree to a two-week content freeze, that is a signal that the migration timeline needs more buffer for managing concurrent content changes. Plan accordingly.</p>
+    </div>
+
+    <!-- SECTION 6 -->
+    <span class="section-num">06</span>
+    <h2>Launch Day Is Not the Finish Line</h2>
+
+    <p>The migration launches. The redirects fire. The new site is live. This is not the end of the project. This is the beginning of the most critical monitoring phase in the entire process. Problems caught in the first 48 hours can be fixed before they cause lasting damage. Problems caught after two weeks may have already cost you rankings that take months to recover.</p>
+
+    <p><strong>Monitor Google Search Console indexing reports hourly for the first 48 hours.</strong> Watch the Coverage report for spikes in errors, particularly 404s, soft 404s, and server errors. Watch the submitted vs indexed URL count. If the indexing rate drops sharply, Google is having trouble processing the migration and you need to investigate immediately.</p>
+
+    <p><strong>Watch for crawl errors, soft 404s, and server errors in real time.</strong> Set up server log monitoring to track Googlebot's activity on the new site. You want to see Googlebot discovering new URLs and getting 200 responses. If you see Googlebot hitting old URLs and getting 404s instead of 301s, your redirects have gaps.</p>
+
+    <p><strong>Track keyword positions daily for the first two weeks.</strong> Not weekly. Daily. Use your rank tracking tool to monitor your priority keyword set every day. Some fluctuation is normal during the reindexing period. A keyword dropping from position 3 to position 8 temporarily is expected. A keyword dropping from position 3 to position 40 is a problem that needs immediate investigation.</p>
+
+    <p><strong>Verify that Google is discovering and indexing new URLs at an acceptable rate.</strong> Submit the new sitemap in Search Console and monitor the "Sitemap" report for processing status. If Google is not picking up new URLs after 48 hours, check for crawl blocks, robots.txt issues, or noindex tags that may have been accidentally deployed on the new templates.</p>
+
+    <p><strong>Check that all redirects are resolving correctly in production.</strong> What worked in staging may not work in production due to CDN caching, server configuration differences, or load balancer behavior. Crawl a sample of old URLs against the production site and verify every redirect resolves to the correct destination with a single 301 hop.</p>
+
+    <p><strong>Monitor organic traffic trends at the page level.</strong> Site-level traffic can mask individual page losses. If ten pages each lose 50% of their traffic but twenty other pages gain 10%, the site-level number might look flat. Page-level monitoring catches these hidden losses before they compound.</p>
+
+    <p><strong>Set up alerts for significant traffic drops.</strong> Any page that drops more than 20% in organic traffic within the first 30 days post-migration should trigger an investigation. Automated alerting catches problems that manual spot-checks miss. Beyond organic traffic monitoring, consider tracking whether your pages continue to appear in <a href="/blog/optimize-ai-answer-engines-2026">AI answer engines</a> post-migration &mdash; AI search visibility can shift after a URL change just like traditional rankings.</p>
+
+    <!-- SECTION 7 -->
+    <span class="section-num">07</span>
+    <h2>What I Got Wrong</h2>
+
+    <p>Twenty-plus migrations have given me plenty of opportunities to make mistakes. Here are the ones that taught me the most.</p>
+
+    <p><strong>Underestimating how long redirect chains from previous migrations had been compounding.</strong> On one migration, I discovered that some URLs were already three hops deep from a previous platform change years earlier. Adding our migration's redirect created a four-hop chain that Google stopped following entirely. Those pages disappeared from the index. Lesson: always audit the existing redirect landscape before adding new redirects.</p>
+
+    <p><strong>Not documenting image and PDF URLs that had accumulated backlinks.</strong> I was thorough about mapping HTML page redirects but completely missed the fact that several PDF downloads and product images had been linked to by industry publications over the years. When the new CMS changed the media library URL structure, those assets returned 404s and the backlink equity evaporated. Lesson: your URL audit must include every resource type, not just pages.</p>
+
+    <p><strong>Trusting CMS auto-generated meta descriptions instead of migrating the originals.</strong> The new CMS had a feature that auto-generated meta descriptions from the first 160 characters of page content. It seemed convenient. It was not. The auto-generated descriptions replaced years of carefully crafted, click-optimized meta descriptions with generic content excerpts. Click-through rates dropped measurably for pages where the original meta descriptions had been performing well. Lesson: always migrate existing meta data as discrete fields.</p>
+
+    <p><strong>Launching on a Friday.</strong> Never launch on a Friday. If something breaks Friday evening, you have a skeleton crew available to fix it over the weekend while Googlebot crawls the broken site for 48 hours. Every migration should launch on a Tuesday or Wednesday morning, giving you the full work week to monitor and respond to issues. I learned this one the hard way.</p>
+
+    <p><strong>Not building automated monitoring early enough.</strong> For my earlier migrations, post-launch monitoring was entirely manual. I checked Search Console, ran crawls, and reviewed rankings by hand. Problems were caught days later instead of hours later because I could not check everything at once. Now I set up automated alerts and monitoring dashboards before launch day, so the system catches issues faster than any human could. Lesson: invest in monitoring infrastructure before you need it, not after.</p>
+
+    <!-- SECTION 8 -->
+    <span class="section-num">08</span>
+    <h2>The Migration Checklist I Use Now</h2>
+
+    <p>Distilled from every lesson above, this is the high-level checklist I follow for every migration. It is not a step-by-step tutorial &mdash; it is the critical checkpoints that I have learned cannot be skipped.</p>
+
+    <div class="framework">
+        <div class="framework-title">Pre-Migration (4&ndash;6 Weeks Before)</div>
+
+        <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+                <h4>Complete Site Crawl</h4>
+                <p>Crawl every URL on the existing site. Document HTML pages, PDFs, images, and all resource types. Compare against sitemap to identify discrepancies.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+                <h4>Traffic and Ranking Baseline</h4>
+                <p>Export 16 months of Search Console data. Map organic traffic to every URL. Document keyword positions for all priority terms. This is your post-migration comparison set.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+                <h4>Backlink and Asset Audit</h4>
+                <p>Export backlink data from Ahrefs or SEMRush. Map external links to specific URLs including non-HTML assets. Flag every URL with significant backlinks for redirect priority.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+                <h4>Schema and Structured Data Catalog</h4>
+                <p>Document every schema type, the pages it appears on, and the data it contains. Ensure new templates will replicate this coverage from day one.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-num">05</div>
+            <div class="step-content">
+                <h4>Redirect Map and SEO Requirements</h4>
+                <p>Build pattern-based redirect rules. Deliver written SEO requirements to the development team covering templates, heading hierarchy, meta fields, canonicals, and schema.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="framework">
+        <div class="framework-title">Migration Week</div>
+
+        <div class="step">
+            <div class="step-num">06</div>
+            <div class="step-content">
+                <h4>Content Freeze</h4>
+                <p>Enforce the content freeze. Track any emergency changes in a shared log. Confirm all delta changes are replicated on the new site.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-num">07</div>
+            <div class="step-content">
+                <h4>Staging Validation</h4>
+                <p>Crawl the staging site to validate redirect rules, template SEO elements, schema output, canonical tags, and robots directives. Fix any issues before launch.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="framework">
+        <div class="framework-title">Launch Day</div>
+
+        <div class="step">
+            <div class="step-num">08</div>
+            <div class="step-content">
+                <h4>Deploy and Verify</h4>
+                <p>Launch on a Tuesday or Wednesday morning. Immediately crawl a sample of old URLs against production to verify redirects. Submit the new sitemap to Search Console. Begin real-time server log monitoring.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="framework">
+        <div class="framework-title">Post-Migration Week 1</div>
+
+        <div class="step">
+            <div class="step-num">09</div>
+            <div class="step-content">
+                <h4>Intensive Monitoring</h4>
+                <p>Monitor Search Console hourly for 48 hours, then daily. Track keyword positions daily. Verify indexing rate. Check for crawl errors, soft 404s, and server errors. Monitor page-level organic traffic.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="framework">
+        <div class="framework-title">Post-Migration Month 1</div>
+
+        <div class="step">
+            <div class="step-num">10</div>
+            <div class="step-content">
+                <h4>Comprehensive Review</h4>
+                <p>Compare keyword positions against pre-migration baseline. Analyze page-level organic traffic trends. Investigate any page with more than a 20% traffic decline. Validate schema markup in production. Document lessons learned for the next migration.</p>
+            </div>
+        </div>
+    </div>
+
+</article>
+
+<section class="related-posts">
+    <h3>Related Posts</h3>
+    <div class="related-posts-grid">
+        <a href="/blog/scalable-schema-multi-location" class="related-post-card">
+            <span class="related-post-label">Technical SEO</span>
+            <h4>Building a Scalable Schema Markup Architecture for Multi-Location Businesses</h4>
+            <span class="related-post-link">Read article &rarr;</span>
+        </a>
+        <a href="/blog/local-seo-at-scale" class="related-post-card">
+            <span class="related-post-label">Local SEO</span>
+            <h4>Local SEO at Scale: Managing Hundreds of Locations Without Losing Your Mind</h4>
+            <span class="related-post-link">Read article &rarr;</span>
+        </a>
+        <a href="/blog/optimize-ai-answer-engines-2026" class="related-post-card">
+            <span class="related-post-label">AEO</span>
+            <h4>How to Optimize for AI Answer Engines in 2026</h4>
+            <span class="related-post-link">Read article &rarr;</span>
+        </a>
+    </div>
+</section>
+
+<footer class="blog-footer">
+    <div class="author-card">
+        <div class="author-avatar">JA</div>
+        <div class="author-info">
+            <h4>James Anderson</h4>
+            <p>SEO Manager with 9+ years of experience in technical SEO, schema architecture, and AI search optimization. Currently building AEO programs across 50+ websites. Based in Salt Lake City, UT.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
