@@ -25,8 +25,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://jkanderson.co/blog/writing-for-search-engines-and-ai</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://jkanderson.co/blog/site-migrations-technical-seo-at-scale</loc>
     <lastmod>2025-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jkanderson.co/blog/content-engine-organic-leads</loc>
+    <lastmod>2025-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
